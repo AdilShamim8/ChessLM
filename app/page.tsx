@@ -36,7 +36,7 @@ export default function Home() {
                   Master Chess with AI
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl font-light">
-                  Challenge the world's most advanced language models in the ultimate test of strategy.
+                  Challenge the world&apos;s most advanced language models in the ultimate test of strategy.
                 </p>
               </div>
 
