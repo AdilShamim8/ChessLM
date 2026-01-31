@@ -39,7 +39,7 @@ export function SiteHeader() {
                             Models
                         </Link>
                         <Link
-                            href="https://ovishekh.com"
+                            href="#about"
                             className="transition-colors hover:text-foreground/80 text-foreground/60"
                         >
                             About
@@ -79,7 +79,7 @@ export function SiteHeader() {
                             Models
                         </Link>
                         <Link
-                            href="https://ovishekh.com"
+                            href="#about"
                             className="text-sm font-medium transition-colors hover:text-foreground/80 text-foreground/60"
                             onClick={() => setIsMenuOpen(false)}
                         >
