@@ -14,7 +14,7 @@ export default function Home() {
 
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 flex items-center justify-center bg-gradient-to-b from-background to-background/90">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-8 text-center">
               <div className="space-y-4">
                 <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center">
@@ -34,8 +34,8 @@ export default function Home() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="w-full py-20 md:py-32 bg-secondary/10">
-          <div className="container px-4 md:px-6">
+        <section id="features" className="w-full py-20 md:py-32 bg-secondary/10 flex justify-center">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center mb-12 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
                 Platform Features
@@ -92,8 +92,8 @@ export default function Home() {
         </section>
 
         {/* AI Models Section */}
-        <section id="models" className="w-full py-20 md:py-32 bg-background">
-          <div className="container px-4 md:px-6">
+        <section id="models" className="w-full py-20 md:py-32 bg-background flex justify-center">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center mb-12 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
                 AI Models Performance
@@ -184,8 +184,8 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="w-full py-20 md:py-32 bg-secondary/20">
-          <div className="container px-4 md:px-6">
+        <section id="about" className="w-full py-20 md:py-32 bg-secondary/20 flex justify-center">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6">
                 About ChessLM
