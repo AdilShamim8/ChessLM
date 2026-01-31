@@ -102,30 +102,18 @@ export const useChessStore = create<ChessStore>((set, get) => ({
                 // In prompt: `const color = move.color === 'w' ? 'black' : 'white';`
                 // If white moved, color = black. capturedPieces['black'].push...
                 // Then in UI: `capturedPieces.white` labeled "White captured".
-                // Use prompt logic exactly to match UI expectation.
-
                 // Prompt logic check:
                 // File 2:
                 // const color = move.color === 'w' ? 'black' : 'white';
                 // capturedPieces[color].push(move.captured);
-                // ...
-                // File 9 (UI):
-                // capturedPieces.white.map(...) -> White captured
+                // If white captured, it's a black piece (lowercase in chess.js)
+                // If black captured, it's a white piece (uppercase in chess.js)
+                // Standardize casing: White captures = black pieces = lowercase; Black captures = white pieces = uppercase
+                const pieceSymbol = captorColor === 'white'
+                    ? move.captured.toLowerCase()
+                    : move.captured.toUpperCase();
 
-                // If white moved ('w'), color becomes 'black'. capturedPieces['black'] gets the piece.
-                // UI: capturedPieces.white...
-                // So if I follow the prompt code, capturedPieces['black'] is populated when white captures.
-                // But the UI displays capturedPieces.white as "White captured".
-                // This seems INVERTED in the prompt's `chess-store.ts` vs `CapturedPieces.tsx`.
-                // If White captures, we want it in the list for "White captured".
-                // So `capturedPieces['white']` should get the piece.
-                // So if move.color is 'w', we should push to 'white'.
-
-                // I will FIX this logic to makes sense:
-                // If move.color is 'w', White captured something. So push to `capturedPieces.white`.
-
-                const playerColor = move.color === 'w' ? 'white' : 'black';
-                capturedPieces[playerColor].push(move.captured);
+                capturedPieces[captorColor].push(pieceSymbol);
             }
         });
 
