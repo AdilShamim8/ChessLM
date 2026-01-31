@@ -3,36 +3,21 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Crown, Zap, Monitor, Brain, Heart } from 'lucide-react';
 import Image from 'next/image';
+import { SiteHeader } from '@/components/SiteHeader';
 import PlayerSelector from '@/components/PlayerSelector';
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <header className="px-4 lg:px-6 h-16 flex items-center border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <Link className="flex items-center justify-center gap-2" href="#">
-          <Image src="/rook.png" width={24} height={24} alt="ChessLM Logo" className="w-6 h-6 object-contain" />
-          <span className="font-bold text-xl tracking-tight text-white">ChessLM</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:text-primary transition-colors" href="#">
-            Features
-          </Link>
-          <Link className="text-sm font-medium hover:text-primary transition-colors" href="#">
-            AI Models
-          </Link>
-          <Link className="text-sm font-medium hover:text-primary transition-colors" href="#">
-            About
-          </Link>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 flex items-center justify-center bg-gradient-to-b from-background to-background/90">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-8 text-center">
               <div className="space-y-4">
-                <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center">
                   Master Chess with AI
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl font-light">
@@ -104,15 +89,15 @@ export default function Home() {
           Built with <Heart className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" /> by <Link href="https://ovishekh.com" className="hover:text-primary transition-colors font-medium">Ovi Shekh</Link>
         </p>
         <nav className="flex gap-2 items-center text-xs text-muted-foreground">
-          <Link className="hover:text-primary transition-colors" href="#">
+          <Link className="hover:text-primary transition-colors" href="https://www.ovishekh.com/privacypolicy">
             Privacy
           </Link>
           <span>.</span>
-          <Link className="hover:text-primary transition-colors" href="#">
+          <Link className="hover:text-primary transition-colors" href="https://www.ovishekh.com/terms">
             Terms
           </Link>
           <span>.</span>
-          <Link className="hover:text-primary transition-colors font-medium" href="https://ovishekh.com">
+          <Link className="hover:text-primary transition-colors font-medium" href="https://www.ovishekh.com/call">
             Work with Ovi
           </Link>
         </nav>

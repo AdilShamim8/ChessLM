@@ -1,0 +1,12 @@
+# ChessLM
+
+ChessLM is a next-generation chess platform that allows valid chess games against advanced Large Language Models (LLMs).
+
+## Features
+- Play against OpenAI, Anthropic, Gemini, and Grok.
+- Real-time analysis.
+- Grandmaster-level AI personas.
+
+## Links
+- Website: https://chesslm.vercel.app
+- Code: https://github.com/ovishkh/ChessLM

@@ -1,7 +1,5 @@
 # ChessLM - Master Chess with AI
 
-![ChessLM Header](public/rook.png)
-
 **ChessLM** is a next-generation chess platform that allows valid chess games against advanced Large Language Models (LLMs). Play against OpenAI, Anthropic, Google Gemini, and more in a sleek, distraction-free environment aimed at Grandmaster-level analysis and strategy.
 
 ## 🚀 Features
