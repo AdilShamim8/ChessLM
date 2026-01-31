@@ -58,7 +58,7 @@ export function SiteHeader() {
                     </Link>
                     <Button
                         variant="ghost"
-                        className="h-8 w-8 px-0"
+                        className="h-8 w-8 px-0 lg:hidden"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
                         {isMenuOpen ? (
