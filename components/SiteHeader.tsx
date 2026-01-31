@@ -21,11 +21,11 @@ export function SiteHeader() {
                             alt="ChessLM Logo"
                             className="w-8 h-8 object-contain"
                         />
-                        <span className="font-bold text-xl tracking-tight text-white hidden sm:inline-block">
+                        <span className="font-bold text-xl tracking-tight text-white">
                             ChessLM
                         </span>
                     </Link>
-                    <nav className="flex items-center gap-6 text-sm font-medium hidden md:flex">
+                    <nav className="flex items-center gap-6 text-sm font-medium hidden">
                         <Link
                             href="#features"
                             className="transition-colors hover:text-foreground/80 text-foreground/60"
@@ -46,7 +46,7 @@ export function SiteHeader() {
                         </Link>
                     </nav>
                 </div>
-                <div className="flex flex-1 items-center justify-end space-x-2 md:hidden">
+                <div className="flex flex-1 items-center justify-end space-x-2">
                     <Button
                         variant="ghost"
                         className="h-8 w-8 px-0"
@@ -62,8 +62,8 @@ export function SiteHeader() {
                 </div>
             </div>
             {isMenuOpen && (
-                <div className="container md:hidden pb-4">
-                    <nav className="flex flex-col space-y-3">
+                <div className="container pb-4 bg-background/95 backdrop-blur">
+                    <nav className="flex flex-col space-y-3 px-4">
                         <Link
                             href="#features"
                             className="text-sm font-medium transition-colors hover:text-foreground/80 text-foreground/60"

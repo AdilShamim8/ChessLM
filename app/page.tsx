@@ -37,45 +37,45 @@ export default function Home() {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary/20">
           <div className="container px-4 md:px-6">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-              <Card className="bg-background/50 border-border/50 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-primary/50">
-                <CardHeader className="text-center">
+              <Card className="bg-background/50 border-border/50 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-primary/50 flex flex-col items-center text-center">
+                <CardHeader className="flex flex-col items-center">
                   <div className="flex justify-center">
                     <Brain className="w-12 h-12 mb-4 text-primary" />
                   </div>
                   <CardTitle>Multiple AI Engines</CardTitle>
-                  <CardDescription>
+                  <CardDescription className="text-center">
                     Play against OpenAI, Anthropic, Gemini, and more.
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="text-center text-muted-foreground">
+                <CardContent className="text-muted-foreground">
                   Test your skills against different LLM reasoning capabilities.
                 </CardContent>
               </Card>
-              <Card className="bg-background/50 border-border/50 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-primary/50">
-                <CardHeader className="text-center">
+              <Card className="bg-background/50 border-border/50 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-primary/50 flex flex-col items-center text-center">
+                <CardHeader className="flex flex-col items-center">
                   <div className="flex justify-center">
                     <Zap className="w-12 h-12 mb-4 text-primary" />
                   </div>
                   <CardTitle>Real-time Analysis</CardTitle>
-                  <CardDescription>
+                  <CardDescription className="text-center">
                     Get instant feedback on your moves.
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="text-center text-muted-foreground">
+                <CardContent className="text-muted-foreground">
                   Learn from your mistakes with detailed engine evaluation.
                 </CardContent>
               </Card>
-              <Card className="bg-background/50 border-border/50 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-primary/50">
-                <CardHeader className="text-center">
+              <Card className="bg-background/50 border-border/50 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-primary/50 flex flex-col items-center text-center">
+                <CardHeader className="flex flex-col items-center">
                   <div className="flex justify-center">
                     <Monitor className="w-12 h-12 mb-4 text-primary" />
                   </div>
                   <CardTitle>Sleek Interface</CardTitle>
-                  <CardDescription>
+                  <CardDescription className="text-center">
                     Distraction-free environment for pure focus.
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="text-center text-muted-foreground">
+                <CardContent className="text-muted-foreground">
                   Enjoy a beautiful, responsive board designed for pros.
                 </CardContent>
               </Card>
