@@ -15,19 +15,19 @@ export default function GameStatus() {
                     <h3 className="text-foreground font-bold text-lg mb-2">Game Status</h3>
                     <div className="flex flex-wrap gap-2">
                         {gameState.isCheckmate && (
-                            <Badge className="bg-red-600 text-white hover:bg-red-700">Checkmate</Badge>
+                            <Badge className="bg-primary text-primary-foreground hover:bg-primary/90">Checkmate</Badge>
                         )}
                         {gameState.isStalemate && (
-                            <Badge className="bg-yellow-600 text-white hover:bg-yellow-700">Stalemate</Badge>
+                            <Badge variant="secondary">Stalemate</Badge>
                         )}
                         {gameState.isDraw && !gameState.isStalemate && (
-                            <Badge className="bg-gray-600 text-white hover:bg-gray-700">Draw</Badge>
+                            <Badge variant="secondary">Draw</Badge>
                         )}
                         {gameState.isCheck && !gameState.isCheckmate && (
-                            <Badge className="bg-orange-600 text-white hover:bg-orange-700 animate-pulse">Check</Badge>
+                            <Badge className="bg-accent text-accent-foreground hover:bg-accent/90 animate-pulse">Check</Badge>
                         )}
                         {!gameState.isGameOver && (
-                            <Badge className="bg-green-600 text-white hover:bg-green-700">In Progress</Badge>
+                            <Badge className="bg-primary/20 text-primary border-primary/20 hover:bg-primary/30">In Progress</Badge>
                         )}
                     </div>
                 </div>

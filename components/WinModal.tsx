@@ -92,29 +92,29 @@ export function WinModal() {
 
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
-            <DialogContent className="sm:max-w-md bg-slate-900 border-slate-800 text-white flex flex-col items-center">
+            <DialogContent className="sm:max-w-md bg-background border-border text-foreground flex flex-col items-center">
                 <DialogHeader className="flex flex-col items-center justify-center space-y-4 pt-4">
-                    <div className="w-20 h-20 bg-yellow-500/20 rounded-full flex items-center justify-center mb-2 animate-bounce">
-                        <Trophy className="w-12 h-12 text-yellow-500" />
+                    <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mb-2 animate-bounce">
+                        <Trophy className="w-12 h-12 text-primary" />
                     </div>
                     <div className="space-y-2 text-center">
-                        <DialogTitle className="text-3xl font-extrabold tracking-tight text-white">
+                        <DialogTitle className="text-3xl font-extrabold tracking-tight text-foreground">
                             {result.title}
                         </DialogTitle>
                         {result.winner && (
                             <div className="flex flex-col items-center gap-2">
-                                <span className="text-xl font-medium text-slate-300">
+                                <span className="text-xl font-medium text-muted-foreground">
                                     {result.winner}
                                 </span>
                                 <span className={`px-2 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-widest border ${result.type === 'human'
-                                        ? 'bg-blue-500/10 text-blue-400 border-blue-500/30'
-                                        : 'bg-purple-500/10 text-purple-400 border-purple-500/30'
+                                    ? 'bg-blue-500/10 text-blue-400 border-blue-500/30'
+                                    : 'bg-primary/10 text-primary border-primary/30'
                                     }`}>
                                     {result.type === 'human' ? 'Human Victor' : 'AI Champion'}
                                 </span>
                             </div>
                         )}
-                        <DialogDescription className="text-slate-400 text-lg pt-2 italic">
+                        <DialogDescription className="text-muted-foreground text-lg pt-2 italic">
                             {result.message}
                         </DialogDescription>
                     </div>
@@ -123,7 +123,7 @@ export function WinModal() {
                     <Button
                         onClick={handleNewGame}
                         variant="outline"
-                        className="flex-1 bg-slate-800 border-slate-700 hover:bg-slate-700 text-white"
+                        className="flex-1 bg-secondary hover:bg-secondary/80 text-foreground border-border"
                     >
                         <Home className="mr-2 h-4 w-4" />
                         Home

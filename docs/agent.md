@@ -10,7 +10,7 @@ TECH STACK:
 - Zustand for state management
 
 PROJECT STRUCTURE:
-chess-ai/
+chesslm/
 ├── .env.local
 ├── package.json
 ├── tsconfig.json
