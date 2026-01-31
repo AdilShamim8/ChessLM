@@ -99,19 +99,21 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="flex flex-col gap-4 sm:flex-row py-8 w-full shrink-0 items-center px-4 md:px-6 border-t border-border/40 bg-background/50 backdrop-blur-sm">
-        <div className="flex flex-col items-center sm:items-start gap-1">
-          <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 All rights reserved by Ovi Shekh.</p>
-          <p className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1">
-            Built with <Heart className="w-3 h-3 text-red-500 fill-red-500" /> by <Link href="https://ovishekh.com" className="hover:text-primary transition-colors underline underline-offset-2">Ovi Shekh</Link>
-          </p>
-        </div>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
+      <footer className="flex flex-col gap-4 py-8 w-full shrink-0 items-center justify-center px-4 md:px-6 border-t border-border/40 bg-background/50 backdrop-blur-sm">
+        <p className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-1">
+          Built with <Heart className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" /> by <Link href="https://ovishekh.com" className="hover:text-primary transition-colors font-medium">Ovi Shekh</Link>
+        </p>
+        <nav className="flex gap-2 items-center text-xs text-muted-foreground">
+          <Link className="hover:text-primary transition-colors" href="#">
             Privacy
+          </Link>
+          <span>.</span>
+          <Link className="hover:text-primary transition-colors" href="#">
+            Terms
+          </Link>
+          <span>.</span>
+          <Link className="hover:text-primary transition-colors font-medium" href="https://ovishekh.com">
+            Work with Ovi
           </Link>
         </nav>
       </footer>
