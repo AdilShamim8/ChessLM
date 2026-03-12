@@ -1,16 +1,35 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Chessboard } from 'react-chessboard';
 import { useChessStore } from '@/lib/chess-store';
 import type { Square } from 'chess.js';
 
 export default function ChessGameBoard() {
     const { game, gameState, gameConfig, makeMove, getCurrentPlayer } = useChessStore();
+    const boardContainerRef = useRef<HTMLDivElement>(null);
     const [rightClickedSquares, setRightClickedSquares] = useState<Record<string, any>>({});
     const [moveFrom, setMoveFrom] = useState<Square | null>(null);
     const [optionSquares, setOptionSquares] = useState<Record<string, any>>({});
     const [isAIThinking, setIsAIThinking] = useState(false);
+    const [boardWidth, setBoardWidth] = useState(600);
+
+    useEffect(() => {
+        const updateBoardWidth = () => {
+            if (!boardContainerRef.current) return;
+
+            const containerWidth = boardContainerRef.current.clientWidth;
+            const calculatedWidth = Math.max(280, Math.min(600, containerWidth));
+            setBoardWidth(calculatedWidth);
+        };
+
+        updateBoardWidth();
+        window.addEventListener('resize', updateBoardWidth);
+
+        return () => {
+            window.removeEventListener('resize', updateBoardWidth);
+        };
+    }, []);
 
     useEffect(() => {
         const currentPlayer = getCurrentPlayer();
@@ -112,7 +131,7 @@ export default function ChessGameBoard() {
     }
 
     return (
-        <div className="w-full max-w-2xl relative">
+        <div ref={boardContainerRef} className="w-full max-w-[600px] relative mx-auto">
             <Chessboard
                 position={gameState.fen}
                 onSquareClick={onSquareClick}
@@ -122,7 +141,7 @@ export default function ChessGameBoard() {
                     ...optionSquares,
                     ...rightClickedSquares
                 }}
-                boardWidth={600}
+                boardWidth={boardWidth}
                 customBoardStyle={{
                     borderRadius: '8px',
                     boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5)'

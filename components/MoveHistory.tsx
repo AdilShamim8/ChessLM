@@ -24,7 +24,7 @@ export default function MoveHistory() {
     }
 
     return (
-        <Card className="bg-card border-border p-4 max-h-96 flex flex-col shadow-lg">
+        <Card className="bg-card border-border p-4 max-h-64 sm:max-h-80 lg:max-h-96 flex flex-col shadow-lg">
             <h3 className="text-foreground font-bold mb-3 text-lg">Move History</h3>
             <div
                 ref={scrollRef}
